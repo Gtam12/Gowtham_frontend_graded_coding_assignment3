@@ -42,8 +42,8 @@ h1{
     box-shadow: 3px 3px;
     border-radius: 5px;
     height: 40px;
-    width: 300px;
-    margin-left: 33%;
+    width: 500px;
+    margin-left: 37%;
     margin-top: 10px;
 }
 
@@ -66,4 +66,15 @@ h1{
     box-shadow: black 3px 3px 3px;
     text-align: center;
     justify-content: center;
+    margin-top: 20px;
+    margin-left: 48%;
+}
+
+.incorrect-char{
+    color: red;
+    text-decoration: underline;
+}
+
+.correct-char{
+    color: green;
 }

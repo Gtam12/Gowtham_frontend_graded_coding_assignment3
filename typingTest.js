@@ -5,7 +5,7 @@ const timerEl = document.querySelector('.timer')
 const accuracyEl = document.querySelector('.accuracy');
 const wpmEl = document.querySelector('.wpm');
 const cpmEl = document.querySelector('.cpm')
-const instructionEl = document.querySelector('.instruction-banner')
+const instructionEl = document.querySelector('.instruction')
 const errorBoxEl = document.querySelector('.error-count')
 const wpmBoxEl = document.querySelector('.wpm-box')
 const cpmBoxEl = document.querySelector('.cpm-box')
@@ -14,7 +14,7 @@ const restartBtnEl =  document.querySelector('.restart')
 
 
 
-let time = 10;
+let time = 2;
 let timeLeft = time;
 let timeElapsed = 0;
 let total_errors = 0;
@@ -41,7 +41,7 @@ function updateTypedText(){
     instructionEl.textContent = null;
     current_instruction = typingText[instInd]
 
-    current_instruction.split(' ').forEach(char=>{
+    current_instruction.split('').forEach(char=>{
         const charSpan = document.createElement('span')
         charSpan.innerText = char
         instructionEl.appendChild(charSpan)
@@ -58,25 +58,25 @@ function validateCurrentTextTyped(){
 
     errors = 0;
 
-    let textAreaArray = textBoxEl.querySelector('span');
+    let textAreaArray = textBoxEl.createElement('span');
     textAreaArray.forEach((char, i)=>{
 
         let typedChar = currentInputArray[i]
 
         if(typedChar == null)
         {
-        char.classList.remove('correct_char');
-        char.classList.remove('incorrect_char');
+        char.classList.remove('correct-char');
+        char.classList.remove('incorrect-char');
         }
 
         else if(typedChar === char.innerText){
-            char.classList.add('correct_char');
-            char.classList.remove('incorrect_char')
+            char.classList.add('correct-char');
+            char.classList.remove('incorrect-char')
         }
 
         else{
-            char.classList.add('incorrect_char');
-            char.classList.remove('correct_char');
+            char.classList.add('incorrect-char');
+            char.classList.remove('correct-char');
             errors++;
         }
 
@@ -120,7 +120,7 @@ function restartGame(){
     textBoxEl.disabled = false;
 
     textBoxEl.value = "";
-    typingText.textContent = "Click on the areab below to start the game.";
+    instructionEl.textContent = "Click on the area below to start the game.";
     accuracyBoxEl.textContent =100;
     timerEl.textContent = timeLeft;
     errorBoxEl.textContent = 0;
@@ -147,7 +147,7 @@ function setTimer(){
 function finishGame(){
     clearInterval(timer);
     textBoxEl.disable = true;
-    typingText.textAreaArray = "Click on restart to start a new game.";
+    instructionEl.textContent = "Click on restart to start a new game.";
     restartBtnEl.style.display = "block";
 
     let countPerMinute = Math.round(((characterTyped/timeElapsed)*60));
