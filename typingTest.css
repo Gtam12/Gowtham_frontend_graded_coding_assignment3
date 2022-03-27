@@ -1,0 +1,56 @@
+
+.type-test-container{
+    text-align: center;
+}
+
+h1{
+    font-weight: lighter;
+}
+
+
+.error-box, .timer-box, .accuracy-box{
+    display: inline-block;
+    background-color: mediumspringgreen;
+    border: 1px solid black;
+    border-radius: 10px;
+    width: 70px;
+    height: 50px;
+    box-shadow: 3px 3px;
+    margin: 5px;
+}
+
+
+.error-title, .timer-title, .accuracy-title{
+    font-size: small;
+    margin: 0;
+}
+
+.error-count, .timer, .accuracy{
+    font-size: x-large;
+    margin: 0;
+
+}
+
+
+.instruction-banner{
+    background-color: mediumspringgreen;
+    border: 1px solid black;
+    box-shadow: 3px 3px;
+    border-radius: 5px;
+    height: 40px;
+    width: 300px;
+    margin-left: 800px;
+    margin-top: 10px;
+}
+
+.instruction{
+    margin-top: 8px;
+}
+
+.type-textbox{
+    width: 600px;
+    height: 100px;
+    background-color: wheat;
+    margin-top: 10px;
+    box-shadow: 3px 3px;
+}
