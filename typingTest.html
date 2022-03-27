@@ -13,6 +13,17 @@
         <div class="type-test-container">
             <h1>Test Your Typing Speed</h1>
 
+
+            <div class = "wpm-box">
+                <p class="wpm-title">WPM</p>
+                <p class="wpm">0</p>
+            </div>
+
+            <div class = "cpm-box">
+                <p class="cpm-title">CPM</p>
+                <p class="cpm">0</p>
+            </div>
+
             <div class="error-box">
                 <p class="error-title">Errors</p>
                 <p class="error-count">0</p>
@@ -34,8 +45,12 @@
                 <p class="instruction">Click on the area below to start the game.</p>
             </div>
 
-            <textarea placeholder="start typing here..." spellcheck="true" class="type-textbox"></textarea>
+            <textarea placeholder="start typing here..." 
+            class="type-textbox"
+            onFocus="startTyping()"
+            onInput="validateCurrentTextTyped()"></textarea>
 
+            <button class ="restart" onClick="restartGame()">Restart</button>
         </div>
 
 

@@ -8,7 +8,7 @@ h1{
 }
 
 
-.error-box, .timer-box, .accuracy-box{
+.error-box, .timer-box, .accuracy-box, .wpm-box, .cpm-box{
     display: inline-block;
     background-color: mediumspringgreen;
     border: 1px solid black;
@@ -20,15 +20,19 @@ h1{
 }
 
 
-.error-title, .timer-title, .accuracy-title{
+.error-title, .timer-title, .accuracy-title, .wpm-title, .cpm-title{
     font-size: small;
     margin: 0;
 }
 
-.error-count, .timer, .accuracy{
+.error-count, .timer, .accuracy, .wpm, .cpm{
     font-size: x-large;
     margin: 0;
 
+}
+
+.wpm-box, .cpm-box{
+    display: none;
 }
 
 
@@ -39,7 +43,7 @@ h1{
     border-radius: 5px;
     height: 40px;
     width: 300px;
-    margin-left: 800px;
+    margin-left: 33%;
     margin-top: 10px;
 }
 
@@ -53,4 +57,13 @@ h1{
     background-color: wheat;
     margin-top: 10px;
     box-shadow: 3px 3px;
+}
+
+.restart{
+    display: none;
+    background-color: blueviolet;
+    color: white;
+    box-shadow: black 3px 3px 3px;
+    text-align: center;
+    justify-content: center;
 }
