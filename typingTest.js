@@ -14,7 +14,7 @@ const restartBtnEl =  document.querySelector('.restart')
 
 
 
-let time = 2;
+let time = 60;
 let timeLeft = time;
 let timeElapsed = 0;
 let total_errors = 0;
@@ -30,7 +30,6 @@ let typingText = [
     'Lorem Ipsum is simply dummy text of the printing and typesetting industry.',
     `Lorem Ipsum has been the industry's standard dummy text ever since the 1500s`,
     `Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum`
-
 ]
 
 
@@ -54,11 +53,11 @@ function updateTypedText(){
 function validateCurrentTextTyped(){
     currentInput = textBoxEl.value;
     let currentInputArray = currentInput.split('');
-    characterType++;
+    characterTyped++;
 
     errors = 0;
 
-    let textAreaArray = textBoxEl.createElement('span');
+    let textAreaArray = textBoxEl.querySelectorAll('span');
     textAreaArray.forEach((char, i)=>{
 
         let typedChar = currentInputArray[i]
@@ -146,7 +145,7 @@ function setTimer(){
 
 function finishGame(){
     clearInterval(timer);
-    textBoxEl.disable = true;
+    textBoxEl.disabled = true;
     instructionEl.textContent = "Click on restart to start a new game.";
     restartBtnEl.style.display = "block";
 
@@ -156,8 +155,9 @@ function finishGame(){
     cpmEl.textContent = countPerMinute;
     wpmEl.textContent = wordsPerMinute;
 
-    cpmBoxEl.sytle.display = 'block';
-    wpmBoxEl.style.display = 'block';
+    cpmBoxEl.sytle.display = 'inline-block';
+    wpmBoxEl.style.display = 'inline-block';
+ 
 
 
 }

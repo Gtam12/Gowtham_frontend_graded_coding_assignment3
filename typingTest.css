@@ -8,7 +8,7 @@ h1{
 }
 
 
-.error-box, .timer-box, .accuracy-box, .wpm-box, .cpm-box{
+.error-box, .timer-box, .accuracy-box,.wpm-box, .cpm-box{
     display: inline-block;
     background-color: mediumspringgreen;
     border: 1px solid black;
@@ -29,10 +29,6 @@ h1{
     font-size: x-large;
     margin: 0;
 
-}
-
-.wpm-box, .cpm-box{
-    display: none;
 }
 
 
